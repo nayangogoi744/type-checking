@@ -7,18 +7,21 @@ class App extends Component{
     return(
         <div>
     <h1>
-        Hello {this.props.name}
+        Hello: {this.props.name}
     </h1>
     <h2>
-        Roll  {this.props.roll}
-    </h2></div>
+        Roll:  {this.props.roll}
+    </h2>
+    <h3>Accessing children: {this.props.children}</h3>
+    </div>
     );
    };
 }
 
 
 App.propType={
-    name : Pt.string,
+    name : Pt.string.isRequired,
     roll : Pt.number
 };
+
 export default App;
